@@ -1,0 +1,35 @@
+.badge
+    position: relative
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    width: auto
+    height: 37px
+    vertical-align: middle
+    touch-action: manipulation
+    padding-left: 17px
+    padding-right: 17px
+    cursor: pointer
+    white-space: nowrap
+    text-decoration: none
+    border: none
+    font: 600 1.6rem/130% $fontFamily
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.09)
+    border-radius: $borderRadiusSm
+    color: #fff
+    transition: background $transitionBase
+    margin-bottom: 3px
+    & svg
+        flex: none
+        margin-right: .5em
+        width: auto
+        height: 15px
+        fill: #ffffff
+    &-primary
+        background: $primary
+    &-warning
+        background: $warning
+    &-info
+        background: $info
+    &-danger
+        background: $danger

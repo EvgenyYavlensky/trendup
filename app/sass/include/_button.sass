@@ -1,0 +1,28 @@
+.button
+    position: relative
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    width: auto
+    text-align: center
+    vertical-align: middle
+    touch-action: manipulation
+    cursor: pointer
+    height: 44px
+    padding-right: 47px
+    padding-left: 47px
+    white-space: nowrap
+    text-decoration: none
+    text-transform: uppercase
+    border: 1px solid transparent
+    font: 400 1.6rem/118% $fontFamilyBtn
+    color: #fff
+    border-radius: $borderRadiusSm
+    background: transparent
+    transition: background-color $transitionBase, border-color $transitionBase
+    &-danger
+        background: $danger
+        border-color: $danger
+        &:hover
+            background: $dangerHover
+            border-color: $dangerHover
