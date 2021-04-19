@@ -1,0 +1,191 @@
+.post
+    & .container
+        +max-width($maxMobile)
+            padding-right: 0
+            padding-left: 0
+    & .card
+        +max-width($maxMobile)
+            border-radius: 0
+
+    &-img
+        margin-top: 24px
+        position: relative
+        height: 340px
+        overflow: hidden
+        +max-width($maxMobile)
+            margin-right: -20px
+            margin-left: -20px
+        +min-width($minMobile)
+            border-radius: $borderRadiusMd
+            height: 425px
+            margin-top: 32px
+        +min-width($minTable)
+            height: 599px
+
+        img
+            width: 100%
+            height: 100%
+
+        &__status
+            position: absolute
+            top: 0
+            left: 0
+            right: 0
+            padding: 20px
+            margin-right: -6px
+            margin-left: -6px
+            display: flex
+            flex-wrap: wrap
+            +min-width($minMobile)
+                padding: 24px
+
+            & > *
+                margin-right: 6px
+                margin-left: 6px
+                margin-bottom: 12px
+    &-content
+        margin-top: 24px
+        display: flex
+        flex-direction: row-reverse
+        +max-width($maxDesktop)
+            flex-wrap: wrap
+
+        &__aside
+            flex: none
+            width: 100%
+            +max-width($maxDesktop)
+                width: 308px
+                margin-bottom: 32px
+            +min-width($minDesktop)
+               width: 408px
+               margin-left: 20px
+        &__desc
+            flex: auto
+            min-width: 0
+            font-size: 2.4rem
+            +min-width($minTable)
+                font-size: 2.6rem
+            a
+                font-size: 2.4rem
+                +min-width($minTable)
+                    font-size: 2.6rem
+            & > img
+                margin-top: 32px
+                margin-bottom: 32px
+            & .iframe-container
+                +max-width($maxMobile)
+                    border-radius: 0
+                    margin-right: -20px
+                    margin-left: -20px
+        &__bg
+            position: relative
+            padding-top: 32px
+            padding-bottom: 32px
+            margin-top: 40px
+            margin-bottom: 40px
+            +min-width($minTable)
+                padding-top: 56px
+                padding-bottom: 52px
+            & *
+                position: relative
+                z-index: 1
+            &::after
+                position: absolute
+                content: ''
+                background-color: #EDF6FF
+                top: 0
+                left: -24px
+                right: -24px
+                bottom: 0
+                +min-width($minTable)
+                    left: -32px
+                    right: -32px
+                +min-width($minDesktop)
+                    width: calc(100% + 392px)
+
+    &-meta
+        text-align: right
+        margin-bottom: 24px
+        &__info
+            +max-width(1365.98px)
+                display: flex
+                align-items: center
+                justify-content: space-between
+            +min-width(360px)
+                flex-direction: row-reverse
+        &__views
+            font: 400 1.6rem/130% $fontFamily
+            color: #949494
+            transition: color $transitionBase
+            +min-width($minDesktop)
+                margin-bottom: 24px
+
+            svg
+                width: 20px
+                height: 20px
+                margin-right: 12px
+        & .social
+            margin-top: 16px
+            +min-width(1366px)
+                justify-content: right
+        &__data
+            display: block
+            font: 400 1.8rem/127% $fontFamily
+            color: $danger
+
+    &-article
+        display: flex
+        flex-wrap: wrap
+        margin-right: -10px
+        margin-left: -10px
+
+        &__item
+            margin-right: 10px
+            margin-left: 10px
+            margin-bottom: 20px
+            width: calc(33.333% - 20px)
+            +max-width($maxDesktop)
+                width: calc(50% - 20px)
+            +max-width($maxMobile)
+                width: calc(100% - 20px)
+
+            &:nth-child(n+4)
+                +max-width($maxMobile)
+                    display: none
+                +min-width($minDesktop)
+                    display: none
+
+        &__img
+            display: block
+            height: 213px
+            margin-bottom: 16px
+            +min-width($minMobile)
+                height: 271px
+            img
+                width: 100%
+                height: 100%
+
+        &__title
+            font-weight: 400
+            color: $textColorHead
+
+    &-contents
+        background-color: #F8F8F8
+        border-radius: $borderRadiusMd
+        padding: 24px
+
+        & > *:not(:last-child)
+            line-height: 126%
+            margin-bottom: 16px
+
+        &__list
+            li
+                font: 400 2rem/130% "IBM Plex Sans",sans-serif
+                &:not(:last-child)
+                    margin-bottom: 12px
+                & > *
+                    color: $danger
+                    transition: color $transitionBase
+
+                    &:hover
+                        color: $dangerHover
